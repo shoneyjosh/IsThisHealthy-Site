@@ -1,9 +1,5 @@
 # README
 
-# SE Rails starter
+# Is This Healthy?
 
-### Welcome! To learn how to get started with your own Rails project, visit the resources below. These files can also be found in the `docs/` directory:
-
-* [Installation Guide](docs/Installation_Guide.md)
-* [Setting up SSH keys with GitHub](docs/Setting_up_SSH_keys_GitHub.md)
-* [More helpful information](docs/More_helpful_info.md)
+### Is This Healthy? allows the user to check whether or not their recipe is healthy or not. The user can add ingredients to their recipe and the website will display all of the nutrition facts of their recipe. The website attempts to be a resource to those with lower incomes. Studies have shown that people with lower incomes tend to eat out on a more frequent basis. This website will give the user the ability to check their ingredients and see if the food they are eating is healthy or not.
