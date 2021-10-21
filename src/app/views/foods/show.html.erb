@@ -1,5 +1,6 @@
 <div class="jumbotron">
   <h1 class="display-4">
+    <%= image_tag(image_url(@food.url), width: '100px', height: '100px') %>
     <%= @food.name %>
   </h1>
   <p class="lead">Serving Size: <%= @food.serving_size %> grams</p>

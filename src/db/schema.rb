@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_20_215925) do
+ActiveRecord::Schema.define(version: 2021_10_21_043814) do
 
   create_table "app_configs", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 2021_10_20_215925) do
     t.float "calories"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "url"
+    t.float "fat"
+    t.float "cholesterol"
+    t.float "sodium"
+    t.float "carbs"
+    t.float "sugar"
+    t.float "protein"
   end
 
   create_table "users", force: :cascade do |t|
