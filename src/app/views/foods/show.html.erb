@@ -1,0 +1,10 @@
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= @food.name %>
+  </h1>
+  <p class="lead">Serving Size: <%= @food.serving_size %> grams</p>
+  <hr class="my-4">
+  <p>Calories: <%= @food.calories %></p>
+  <%= link_to 'Edit', edit_food_path(@food), class:"btn btn-secondary" %>
+<%= link_to 'Back', foods_path, class:"btn btn-dark" %>
+</div>
