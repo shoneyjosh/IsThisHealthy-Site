@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_10_21_043814) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "app_configs", force: :cascade do |t|
     t.string "name"
     t.string "logo_url"
@@ -25,13 +28,13 @@ ActiveRecord::Schema.define(version: 2021_10_21_043814) do
     t.float "calories"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "url"
     t.float "fat"
     t.float "cholesterol"
     t.float "sodium"
     t.float "carbs"
     t.float "sugar"
     t.float "protein"
+    t.string "url"
   end
 
   create_table "users", force: :cascade do |t|

@@ -6,5 +6,6 @@ class AddFactsToFoods < ActiveRecord::Migration[6.0]
     add_column :foods, :carbs, :float
     add_column :foods, :sugar, :float
     add_column :foods, :protein, :float
+    add_column :foods, :url, :string
   end
 end
