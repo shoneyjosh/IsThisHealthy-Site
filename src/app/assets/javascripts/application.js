@@ -35,3 +35,6 @@ $(function () {
     lastScrollTop = st;
   });
 });
+
+//= require jquery
+//= require jquery_ujs

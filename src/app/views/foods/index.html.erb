@@ -29,8 +29,18 @@
         <td><%= food.sugar %> (g)</td>
         <td><%= food.protein %> (g)</td>
         <td><%= link_to 'Show', food %></td>
+        <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_food_path(food) %></td>
         <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+
+        <td>
+        <%= form_for @recipe_item, remote: true do |f| %>
+        <%= f.hidden_field :food_id, :value => food.id%>
+        <%= f.number_field :quantity, :value => 1, :min => 1%>
+        <%= f.submit "Add to Recipe"%>
+        <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +48,8 @@
 
 <br>
 
+<div id="recipe">
+  <%= render 'recipes/recipe' %>
+</div>
+<br/>
 <%= link_to 'New Food', new_food_path, class:"btn btn-secondary" %>

@@ -7,12 +7,15 @@
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 Rails.application.routes.draw do
+  get 'recipes/show'
   resources :foods
+  resources :recipe_items
+  resource :recipes, only:[:show, :checkCal]
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The root page, e.g. www.example.com/, is sent here
   # root 'controller#method_in_controller'
   get 'home/recipe'
-  root 'home#index'
+  root 'foods#index'
   # Devise authentification pages. This controlls the user login
   # and authentification system.
   devise_for :users

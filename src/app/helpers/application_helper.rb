@@ -17,4 +17,12 @@ module ApplicationHelper
   def app_config
     AppConfig.first
   end
+
+  def current_recipe
+    if !session[:recipe_id].nil?
+      Recipe.find(session[:recipe_id])
+    else
+      Recipe.new
+    end
+  end
 end
