@@ -1,3 +1,8 @@
+#Josh Shoenfelt - Developer
+
+#Recipe Controller displays all of the recipe items in the recipe
+#and checks if the different nutrition information totals make the recipe unhealthy
+#If any of the info exceeds a certain amount, it is displayed on the webpage and is defined as "unhealthy"
 class RecipesController < ApplicationController
   skip_before_action :authenticate_user!
   def show

@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   # The root page, e.g. www.example.com/, is sent here
   # root 'controller#method_in_controller'
   get 'home/recipe'
-  root 'foods#index'
+  root 'home#index'
   # Devise authentification pages. This controlls the user login
   # and authentification system.
   devise_for :users

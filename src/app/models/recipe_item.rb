@@ -1,3 +1,6 @@
+#Josh Shoenfelt - Developer
+
+#Recipe Item has many attributes that are applied here
 class RecipeItem < ApplicationRecord
     belongs_to :recipe
     belongs_to :food

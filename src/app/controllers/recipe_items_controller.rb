@@ -1,3 +1,8 @@
+#Josh Shoenfelt - Developer
+
+#Creates a recipe item to add to the recipe
+#Allows for recipe item to update within recipe
+#Destroy will destroy the recipe item with the associated ID
 class RecipeItemsController < ApplicationController
     skip_before_action :authenticate_user!
     def create

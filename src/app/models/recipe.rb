@@ -1,3 +1,9 @@
+#Josh Shoenfelt - Developer
+
+#This is where the recipe stores all of its information
+#All of the total values are stored in these attirbutes and are
+#used to determine if the recipe is healthy or not
+
 class Recipe < ApplicationRecord
     has_many :recipe_items
     before_save :set_calTotal
