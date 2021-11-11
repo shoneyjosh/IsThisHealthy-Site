@@ -7,7 +7,7 @@
 ***
 
 ### Install this repository:
-git clone https://github.com/vpatel2018/SERVD.git
+git clone https://github.com/Shoney-Josh/IsThisHealthy.git
 Once cloned, navigate to the servd/code directory (src) and install the project dependencies.
 
 bundle install
