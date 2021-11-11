@@ -10,7 +10,7 @@
 git clone https://github.com/Shoney-Josh/IsThisHealthy.git
 Once cloned, navigate to the servd/code directory (src) and install the project dependencies.
 
-bundle install
+'bundle install'
 
 *you may need to update the Ruby version to be compatible with your VM, if you receive an error message after trying to run `bundle install` you must alter the .ruby-version file 
 - you can do this through a text editor by entering `vi .ruby-version` (if using Vim) or `notepad .ruby-version` (on Windows) and once in the file change the ruby version to match the version of ruby installed on your VM.  
@@ -22,17 +22,17 @@ If you still encounter errors, try restarting PostgreSQL.
 
 For CentOS:
 
-$ sudo systemctl restart postgresql
+'$ sudo systemctl restart postgresql'
 For MacOS:
 
 $ pg_ctl -D /usr/local/var/postgres start
 If you're still encountering errors, reach out to someone.
 
 Create the databases and perform migration:
-rake db:create
-rake db:migrate:reset
-rake db:migrate
-rake db:seed
+'rake db:create'
+'rake db:migrate:reset'
+'rake db:migrate'
+'rake db:seed'
 
 ***
 
