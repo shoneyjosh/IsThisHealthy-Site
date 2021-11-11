@@ -11,4 +11,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   # See if the current user is logged in
   before_action :authenticate_user!
+
+  include ApplicationHelper
 end

@@ -1,3 +1,9 @@
+#Josh Shoenfelt - Developer
+
+#Foods controller, handles all of the food in the database
+#Create, destroy, edit, etc.
+#Also has a search feature using a gem called ransack
+
 class FoodsController < ApplicationController
   skip_before_action :authenticate_user!
   before_action :set_food, only: %i[ show edit update destroy ]
@@ -5,7 +11,11 @@ class FoodsController < ApplicationController
 
   # GET /foods or /foods.json
   def index
-    @foods = Food.all
+    
+    @q = Food.ransack(params[:q])
+    @foods = @q.result
+    
+    @recipe_item = current_recipe.recipe_items.new
   end
 
   # GET /foods/1 or /foods/1.json

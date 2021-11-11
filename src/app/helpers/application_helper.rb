@@ -1,3 +1,7 @@
+#Josh Shoenfelt - Developer
+
+#Added one function, current_recipe. Looks in the browser to see if a current
+#session exists, if not it creates a new recipe
 # frozen_string_literal: true
 
 # Helper functions made here are accessable in all views
@@ -16,5 +20,14 @@ module ApplicationHelper
 
   def app_config
     AppConfig.first
+  end
+
+  #
+  def current_recipe
+    if !session[:recipe_id].nil?
+      Recipe.find(session[:recipe_id])
+    else
+      Recipe.new
+    end
   end
 end

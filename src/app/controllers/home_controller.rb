@@ -1,3 +1,5 @@
+#Josh Shoenfelt - Developer
+
 # frozen_string_literal: true
 
 # Controller for the home page already made for you
