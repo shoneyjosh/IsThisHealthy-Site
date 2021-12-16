@@ -3,8 +3,22 @@
 #Recipe Controller displays all of the recipe items in the recipe
 #and checks if the different nutrition information totals make the recipe unhealthy
 #If any of the info exceeds a certain amount, it is displayed on the webpage and is defined as "unhealthy"
+
+require 'csv'
 class RecipesController < ApplicationController
   skip_before_action :authenticate_user!
+
+  def export
+    @recipe_items = current_recipe.recipe_items
+
+    respond_to do |format|
+      format.csv do 
+        response.headers['Content-Type'] = 'text/csv'
+        response.headers['Content-Disposition'] = "attachment; filename = recipe.csv"
+      end
+    end
+  end
+
   def show
     @recipe_items = current_recipe.recipe_items
 

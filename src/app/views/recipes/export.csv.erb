@@ -1,0 +1,10 @@
+<%#Josh Shoenfelt - Developer
+
+#Export
+#Handles all the functionality of exporting to a CSV%>
+
+<%- headers = ['Name', 'Servings(g)' 'Calories', 'Fat(g)', 'Sodium(mg)', 'Carbs(g)', 'Sugar(g)', 'Protein(g)', 'Cholesterol(mg)'] -%>
+<%= CSV.generate_line headers %>
+<%- @recipe_items.each do |item| -%>
+<%= CSV.generate_line([item.food.name, item.calories * item.quantity, item.fat * item.quantity, item.sodium  * item.quantity, item.carbs * item.quantity, item.sugar * item.quantity, item.protein * item.quantity, item.cholesterol * item.quantity])-%>
+<%- end -%>

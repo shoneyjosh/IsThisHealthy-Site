@@ -8,6 +8,7 @@
 
 Rails.application.routes.draw do
   get 'recipes/show'
+  get 'recipes/export', to: 'recipes#export'
   resources :foods
   resources :recipe_items
   resource :recipes, only:[:show, :checkCal]
