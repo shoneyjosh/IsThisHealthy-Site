@@ -31,9 +31,11 @@ The script only needs to be run once.  To check if it was successfully installed
 type git clone https://github.com/Shoney-Josh/IsThisHealthy in your terminal
 
 ### Finally, run the app.
-Find your ip address by running the command
+Find your VM’s ip address by running the command
 
 `ip addr show eth0`
+
+**Please see the instructions to set up the Virtual Machine Setup (given at the beginning of the semester) to review how to run the server. ** 
 
 Use the `--binding` flag or you won't be able to view the site from your browser due to the way the HPC handles VM connections.
 
@@ -43,7 +45,7 @@ Run the server by running:
 
 Note that you won't be able to run the rails server unless you are in the `src` folder.
 
-The app should be available in the browser at http://youripaddress:3000/ 
+The app should be available in the browser at http://csc415-serverXX.hpc.tcnj.edu:3000/ 
 Where XX is your server number.
 
 ***
